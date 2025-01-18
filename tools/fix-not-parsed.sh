@@ -9,4 +9,4 @@ do
         rm $pth
         ./cyrus2dovecot $user
 done
-
+chown -R mail:maildrop /var/spool/dovecot/

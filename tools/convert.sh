@@ -10,3 +10,4 @@ do
         echo "migrate $u"
         ./cyrus2dovecot $u
 done
+chown -R mail:maildrop /var/spool/dovecot/
