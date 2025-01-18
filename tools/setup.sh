@@ -11,7 +11,7 @@ mailid=$(id -u mail)
 /usr/bin/sed -i s/#DOVEADMIPW#/${doveadminpw}/  /etc/dovecot/master-users
 /usr/bin/sed -i s/#REGISTERPW#/${registerpw}/  /etc/dovecot/master-users
 /usr/bin/sed -i s/#LDAPBASE#/${LDAPBASE}/g  /etc/dovecot/dovecot-ldap.conf.ext
-/usr/bin/sed -i s/#SERVERNET#/${CRANIX_SERVER_NET}/g /etc/dovecot/conf.d/10-ssl.conf
+/usr/bin/sed -i s#SERVERNET#${CRANIX_SERVER_NET}#g /etc/dovecot/conf.d/10-ssl.conf
 /usr/bin/sed -i s/#MAILID#/${mailid}/ /etc/dovecot/conf.d/10-mail.conf
 
 echo "Configure postfix"
